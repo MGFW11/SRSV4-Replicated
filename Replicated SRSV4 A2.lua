@@ -305,7 +305,7 @@ if not getgenv().Network then
     EnablePartControl()
 end
 
-local radius = 80
+local radius = 50
 local height = 100
 local rotationSpeed = 80
 local attractionStrength = 10000
