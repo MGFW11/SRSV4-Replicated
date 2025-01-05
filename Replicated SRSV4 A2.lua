@@ -67,7 +67,7 @@ local function ForcePart(v)
         Torque.Attachment0 = Attachment2
         AlignPosition.MaxForce = 9999999999999999
         AlignPosition.MaxVelocity = math.huge
-        AlignPosition.Responsiveness = 200
+        AlignPosition.Responsiveness = 1000000
         AlignPosition.Attachment0 = Attachment2
         AlignPosition.Attachment1 = Attachment1
     end
