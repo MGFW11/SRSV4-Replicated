@@ -65,9 +65,9 @@ local function ForcePart(v)
         local AlignPosition = Instance.new("AlignPosition", v)
         local Attachment2 = Instance.new("Attachment", v)
         Torque.Attachment0 = Attachment2
-        AlignPosition.MaxForce = 9999999999999999999
-        AlignPosition.MaxVelocity = 1000000000000000
-        AlignPosition.Responsiveness = 1000000000000
+        AlignPosition.MaxForce = 9999999999999999
+        AlignPosition.MaxVelocity = math.huge
+        AlignPosition.Responsiveness = 200
         AlignPosition.Attachment0 = Attachment2
         AlignPosition.Attachment1 = Attachment1
     end
@@ -194,7 +194,7 @@ RadiusCorner.Parent = RadiusDisplay
 local Watermark = Instance.new("TextLabel")
 Watermark.Size = UDim2.new(1, 0, 0, 20)
 Watermark.Position = UDim2.new(0, 0, 1, -20)
-Watermark.Text = "Super Ring [V4] by lukas Modified By Mhffa11"
+Watermark.Text = "Super Ring [V4] by lukas"
 Watermark.TextColor3 = Color3.fromRGB(255, 255, 255) -- Dark brown
 Watermark.BackgroundTransparency = 1
 Watermark.Font = Enum.Font.Fondamento
@@ -305,10 +305,10 @@ if not getgenv().Network then
     EnablePartControl()
 end
 
-local radius = 100
+local radius = 50
 local height = 100
-local rotationSpeed = 30
-local attractionStrength = 3000
+local rotationSpeed = 1
+local attractionStrength = 2500
 local ringPartsEnabled = false
 
 local function RetainPart(Part)
