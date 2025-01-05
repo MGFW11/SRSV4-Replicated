@@ -24,7 +24,7 @@ if not getgenv().Network then
         if typeof(Part) == "Instance" and Part:IsA("BasePart") and Part:IsDescendantOf(Workspace) then
             table.insert(Network.BaseParts, Part)
             Part.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
-            Part.CanCollide = false
+            Part.CanCollide = true
         end
     end
 
@@ -59,7 +59,7 @@ local function ForcePart(v)
         if v:FindFirstChild("Torque") then
             v:FindFirstChild("Torque"):Destroy()
         end
-        v.CanCollide = false
+        v.CanCollide = true
         local Torque = Instance.new("Torque", v)
         Torque.Torque = Vector3.new(100000, 100000, 100000)
         local AlignPosition = Instance.new("AlignPosition", v)
@@ -194,7 +194,7 @@ RadiusCorner.Parent = RadiusDisplay
 local Watermark = Instance.new("TextLabel")
 Watermark.Size = UDim2.new(1, 0, 0, 20)
 Watermark.Position = UDim2.new(0, 0, 1, -20)
-Watermark.Text = "Super Ring [V4] by lukas"
+Watermark.Text = "Super Ring [V4] by lukas Modified By Mhffa11"
 Watermark.TextColor3 = Color3.fromRGB(255, 255, 255) -- Dark brown
 Watermark.BackgroundTransparency = 1
 Watermark.Font = Enum.Font.Fondamento
