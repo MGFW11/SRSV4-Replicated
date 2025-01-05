@@ -305,10 +305,10 @@ if not getgenv().Network then
     EnablePartControl()
 end
 
-local radius = 50
+local radius = 100
 local height = 100
-local rotationSpeed = 1
-local attractionStrength = 5000
+local rotationSpeed = 30
+local attractionStrength = 3000
 local ringPartsEnabled = false
 
 local function RetainPart(Part)
