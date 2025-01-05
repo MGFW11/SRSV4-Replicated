@@ -24,7 +24,7 @@ if not getgenv().Network then
         if typeof(Part) == "Instance" and Part:IsA("BasePart") and Part:IsDescendantOf(Workspace) then
             table.insert(Network.BaseParts, Part)
             Part.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
-            Part.CanCollide = true
+            Part.CanCollide = false
         end
     end
 
@@ -59,15 +59,15 @@ local function ForcePart(v)
         if v:FindFirstChild("Torque") then
             v:FindFirstChild("Torque"):Destroy()
         end
-        v.CanCollide = true
+        v.CanCollide = false
         local Torque = Instance.new("Torque", v)
         Torque.Torque = Vector3.new(100000, 100000, 100000)
         local AlignPosition = Instance.new("AlignPosition", v)
         local Attachment2 = Instance.new("Attachment", v)
         Torque.Attachment0 = Attachment2
-        AlignPosition.MaxForce = 99999999999999999999
-        AlignPosition.MaxVelocity = 10000000000000000
-        AlignPosition.Responsiveness = 10000000000000
+        AlignPosition.MaxForce = 9999999999999999999
+        AlignPosition.MaxVelocity = 1000000000000000
+        AlignPosition.Responsiveness = 1000000000000
         AlignPosition.Attachment0 = Attachment2
         AlignPosition.Attachment1 = Attachment1
     end
