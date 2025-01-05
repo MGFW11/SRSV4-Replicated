@@ -65,9 +65,9 @@ local function ForcePart(v)
         local AlignPosition = Instance.new("AlignPosition", v)
         local Attachment2 = Instance.new("Attachment", v)
         Torque.Attachment0 = Attachment2
-        AlignPosition.MaxForce = 9999999999999999
-        AlignPosition.MaxVelocity = math.huge
-        AlignPosition.Responsiveness = 1000000
+        AlignPosition.MaxForce = 9999999999999999999
+        AlignPosition.MaxVelocity = 1000000000000000
+        AlignPosition.Responsiveness = 1000000000000
         AlignPosition.Attachment0 = Attachment2
         AlignPosition.Attachment1 = Attachment1
     end
