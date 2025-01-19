@@ -66,8 +66,8 @@ local function ForcePart(v)
         local Attachment2 = Instance.new("Attachment", v)
         Torque.Attachment0 = Attachment2
         AlignPosition.MaxForce = 999999999999999999
-        AlignPosition.MaxVelocity = 999999999999999
-        AlignPosition.Responsiveness = 999999999999
+        AlignPosition.MaxVelocity = 999999999999999999
+        AlignPosition.Responsiveness = 999999999999999999
         AlignPosition.Attachment0 = Attachment2
         AlignPosition.Attachment1 = Attachment1
     end
@@ -308,7 +308,7 @@ end
 local radius = 50
 local height = 100
 local rotationSpeed = 5
-local attractionStrength = 1500
+local attractionStrength = 1000000
 local ringPartsEnabled = false
 
 local function RetainPart(Part)
