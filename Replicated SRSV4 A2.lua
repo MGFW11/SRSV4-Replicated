@@ -307,8 +307,8 @@ end
 
 local radius = 50
 local height = 100
-local rotationSpeed = 50
-local attractionStrength = 5000
+local rotationSpeed = 55
+local attractionStrength = 5500
 local ringPartsEnabled = false
 
 local function RetainPart(Part)
